@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Modelo interactivo T = 100 años d = 1 hora</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+      body { margin: 0; font-family: sans-serif; }
+      h1 {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        background: rgba(0,0,0,0.5);
+        color: white;
+        padding: 10px;
+        border-radius: 8px;
+        z-index: 10;
+        font-size: 20px;
+      }
+      .titulo {
+        position: absolute;
+        top: 80px;
+        left: 20px;
+        background: rgba(0,0,0,0.5);
+        color: white;
+        padding: 10px;
+        border-radius: 8px;
+        z-index: 10;
+        display: flex;
+        gap: 10px;
+        font-size: 16px;
+      }
+      .imagen-inferior {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        z-index: 10;
+      }
+      .imagen-inferior img {
+        width: 100px; /* ajusta el tamaño según necesites */
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      }
+      model-viewer { width: 100vw; height: 100vh; }
+    </style>
+  </head>
+  <body>
+    <h1>Alameda Poniente, Mancha de inundación Máxima T = 100 años d = 1 hora</h1>
+    <div class="titulo">
+      <span>Ingeniería Civil</span>
+      <span>Tec de Monterrey Campus Santa Fe</span>
+    </div>
+    <div class="imagen-inferior">
+      <img src="tec.png" alt="Logo o imagen decorativa" />
+    </div>
+    <model-viewer 
+      src="T100_D1_2.glb" 
+      alt="Modelo plano" 
+      auto-rotate 
+      camera-controls 
+      shadow-intensity="1" 
+      environment-image="https://modelviewer.dev/shared-assets/environments/moon_1k.hdr">
+    </model-viewer>
+  </body>
+</html>
